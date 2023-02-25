@@ -1,2 +1,3 @@
 # Group-10
-Group 10 Repo
+
+Here is a repo we can use for all of our group projects. 
