@@ -9,8 +9,7 @@ class Order():
         self.burger_count = self.randomBurgers()
 
     def randomBurgers(self):
-        self.number_of_burgers = random.randint(1, 20)
-        return self.number_of_burgers
+        return random.randint(1, 20)
 
 
 class Person():
@@ -29,10 +28,25 @@ class Customer(Person):
         super().__init__()
         self.order = Order()
 
-queue = Customer()
+queue = []
+Dict = {}
 
-testOrder = Order()
-testName = Person()
+for i in range(0, 100):
+    queueCustomer = Customer()
 
-print(testOrder.burger_count)
-print(testName.customer_name)
+    queue.append(queueCustomer)
+
+while len(queue):
+    if queue[0].customer_name in Dict:
+        TotalBurgers = Dict[queue[0].customer_name] 
+        Dict[queue[0].customer_name] = TotalBurgers + queue[0].order.burger_count
+        queue.pop(0)
+    else:
+        Dict[f"{queue[0].customer_name}"] = queue[0].order.burger_count
+        queue.pop(0)
+
+listSortedCustomers = sorted(Dict.items(), key=lambda x: x[1], reverse=True) 
+
+for Dasher in listSortedCustomers:
+    print(f"{Dasher[0]}: {Dasher[1]}")
+
