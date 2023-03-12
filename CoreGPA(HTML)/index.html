@@ -36,21 +36,6 @@
   <form>
     <!--insert html tags -->
 
-    <datalist id="grades">
-      <option>A</option>
-      <option>A-</option>
-      <option>B+</option>
-      <option>B</option>
-      <option>B-</option>
-      <option>C+</option>
-      <option>C</option>
-      <option>C-</option>
-      <option>D+</option>
-      <option>D</option>
-      <option>D-</option>
-      <option>F</option>
-    </datalist>
-
     <datalist id="essayScores">
       <option>4</option>
       <option>3</option>
@@ -64,11 +49,53 @@
       <!-- <input class="btn btn-primary" type="submit" name="Sumbit"> -->
       <label>GPA for your last 30 credits:</label><input id="last30GPA" type="number" min="0.00" max="4.00" step="0.01">
       <br>
-      <label>Accounting 200 Grade:</label><input id="acc200Grade" list="grades">
+      <label>Accounting 200 Grade:</label>
+      <select id="acc200Grade">
+        <option value="4">A</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B</option>
+        <option>B-</option>
+        <option>C+</option>
+        <option>C</option>
+        <option>C-</option>
+        <option>D+</option>
+        <option>D</option>
+        <option>D-</option>
+        <option>F</option>
+      </select>
       <br>
-      <label>IS 201 Grade:</label><input id="is201Grade" list="grades">
+      <label>IS 201 Grade:</label>
+      <select id="is201Grade">
+        <option value="4">A</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B</option>
+        <option>B-</option>
+        <option>C+</option>
+        <option>C</option>
+        <option>C-</option>
+        <option>D+</option>
+        <option>D</option>
+        <option>D-</option>
+        <option>F</option>
+      </select>
       <br>
-      <label>IS 303 Grade:</label><input id="is303Grade" list="grades">
+      <label>IS 303 Grade:</label>
+      <select id="is303Grade">
+        <option value="4">A</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B</option>
+        <option>B-</option>
+        <option>C+</option>
+        <option>C</option>
+        <option>C-</option>
+        <option>D+</option>
+        <option>D</option>
+        <option>D-</option>
+        <option>F</option>
+      </select>
       <br>
       <label>Essay score (0-4):</label><input id="essay" list="essayScores">
     </form>
