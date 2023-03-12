@@ -1,0 +1,13 @@
+form {
+    width: 400px;
+    margin: auto;
+}
+
+label {
+    width: 200px;
+}
+
+.button {
+    width: 125px;
+    margin: auto;
+}

@@ -6,40 +6,99 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CorGPA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
-  <script>
-    //This function is called when the user clicks on the calcGPA button
-    function calcGPA() {
-      //Extract the values from the HTML inputs by their assigned id and assigns them to variables
-      //The value extracted is converted from a string to a float/decimal
-      fIS201 = parseFloat(document.getElementById("is201Grade").value);
-      fACC200 = parseFloat(document.getElementById("acc200Grade").value);
-      fIS303 = parseFloat(document.getElementById("is303Grade").value);
-      fOverallGPA = parseFloat(document.getElementById("overallGPA").value);
-      fLast30GPA = parseFloat(document.getElementById("last30GPA").value);
-      fEssay = parseInt(document.getElementById("essay").value);
 
-      //calculates new gpa
-      fFinalGPA = ((fIS201 * .3) + (fIS303 * .3) + (fACC200 * .05) + (fOverallGPA * .12) + (fLast30GPA * .18) + (fEssay * .05)).toFixed(2);
-
-      //Display the calculated GPA to the HTML label named "coreGPA"
-      document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA;
-    }
-  </script>
 </head>
 
 <body>
+  <nav style="color: rgb(128, 128, 128); padding-top: 0px;" class="navbar navbar-expand-lg bg-body-tertiary">
+    <div style="background-color: rgb(206, 204, 204);" class="container-fluid">
+      <a class="navbar-brand" href="#">Group 10- GPA Calculator</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/evanneff1/Group-10">See GitHub</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Sign-up</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
   <form>
     <!--insert html tags -->
 
-    <button type="button" onclick="calcGPA()">Calculate GPA</button>
-    <form method="POST">
-      <input type="text" name="variable">
-      <input type="submit" name="Sumbit">
+    <datalist id="grades">
+      <option>A</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B</option>
+      <option>B-</option>
+      <option>C+</option>
+      <option>C</option>
+      <option>C-</option>
+      <option>D+</option>
+      <option>D</option>
+      <option>D-</option>
+      <option>F</option>
+    </datalist>
 
+    <datalist id="essayScores">
+      <option>4</option>
+      <option>3</option>
+      <option>2</option>
+      <option>1</option>
+    </datalist>
+    
+    <form method="POST">
+      <label>Overall GPA: </label><input id="overallGPA" type="number" min="0.00" max="4.00" step="0.01">
+      <br>
+      <!-- <input class="btn btn-primary" type="submit" name="Sumbit"> -->
+      <label>GPA for your last 30 credits:</label><input id="last30GPA" type="number" min="0.00" max="4.00" step="0.01">
+      <br>
+      <label>Accounting 200 Grade:</label><input id="acc200Grade" list="grades">
+      <br>
+      <label>IS 201 Grade:</label><input id="is201Grade" list="grades">
+      <br>
+      <label>IS 303 Grade:</label><input id="is303Grade" list="grades">
+      <br>
+      <label>Essay score (0-4):</label><input id="essay" list="essayScore">
     </form>
-    <form type=""></form> <!--insert html tag for displaying the calcualted GPA -->
+    <br>
+    <div style="width: 125px; margin: auto;">
+    <button class="button btn btn-primary" type="button" onclick="calcGPA()">Calculate GPA</button>
+    </div>
+
+    <form type=""><label id="coreGPA"></label></form> <!--insert html tag for displaying the calcualted GPA -->
     </form>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+  //This function is called when the user clicks on the calcGPA button
+  function calcGPA() {
+    //Extract the values from the HTML inputs by their assigned id and assigns them to variables
+    //The value extracted is converted from a string to a float/decimal
+    fIS201 = parseFloat(document.getElementById("is201Grade").value);
+    fACC200 = parseFloat(document.getElementById("acc200Grade").value);
+    fIS303 = parseFloat(document.getElementById("is303Grade").value);
+    fOverallGPA = parseFloat(document.getElementById("overallGPA").value);
+    fLast30GPA = parseFloat(document.getElementById("last30GPA").value);
+    fEssay = parseInt(document.getElementById("essay").value);
+
+    //calculates new gpa
+    fFinalGPA = ((fIS201 * .3) + (fIS303 * .3) + (fACC200 * .05) + (fOverallGPA * .12) + (fLast30GPA * .18) + (fEssay * .05)).toFixed(2);
+
+    //Display the calculated GPA to the HTML label named "coreGPA"
+    document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA;
+  }
+</script>
 </html>
