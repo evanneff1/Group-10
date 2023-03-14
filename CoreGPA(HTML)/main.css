@@ -1,5 +1,5 @@
 #coreGPA {
-    width: 800px;
+    width: 500px;
     text-align: center;
 }
 
@@ -29,8 +29,35 @@ form {
     padding-top: 0%;
 }
 
+.pic {
+    width: 55vw;
+    margin:auto;
+}
+img {
+    width: 55vw;
+}
 
 
+@media (max-width: 800px) {
+    .pic {
+        width: 100vw;
+        margin:auto;
+    }
+    img {
+        width: 100vw;
+    }
+}
+
+.instructions {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    text-align: center;
+}
+
+#coreGPA {
+    font-weight: bold;
+}
 
 
 
