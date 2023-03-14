@@ -1,6 +1,10 @@
-form {
-    width: 400px;
-    margin: auto;
+#coreGPA {
+    width: 800px;
+    text-align: center;
+}
+
+select {
+    width: 125px;
 }
 
 label {
@@ -11,3 +15,26 @@ label {
     width: 125px;
     margin: auto;
 }
+
+input {
+    width: 125px;
+}
+
+form {
+    width: fit-content;
+    margin: auto;
+}
+
+.navStyle {
+    padding-top: 0%;
+}
+
+
+
+
+
+
+
+
+
+
