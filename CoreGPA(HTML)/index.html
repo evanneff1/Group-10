@@ -1,3 +1,7 @@
+<!-- Group 10 Hamburger Project
+Evan Neff, Dawson Newell, Jake Millet, Tanner Child, Cameron Pennock, Paxton Davis
+we used git when completing this assignment -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Core GPA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -14,7 +19,8 @@
   <nav class="navStyle navbar navbar-expand-lg bg-body-tertiary">
     <div style="background-color: rgb(206, 204, 204);" class="container-fluid">
       <a class="navbar-brand" href="#">Group 10- GPA Calculator</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,6 +35,15 @@
 
 
   <form>
+    <!--insert html tags -->
+
+    <datalist id="essayScores">
+      <option>4</option>
+      <option>3</option>
+      <option>2</option>
+      <option>1</option>
+    </datalist>
+
     <br>
     <form method="POST">
       <label>Overall GPA:</label><input id="overallGPA" type="number" min="0.00" max="4.00" step="0.01">
@@ -94,14 +109,15 @@
     </form>
     <br>
     <div style="width: 125px; margin: auto;">
-    <button class="button btn btn-primary" type="button" onclick="calcGPA()">Calculate GPA</button>
+      <button class="button btn btn-primary" type="button" onclick="calcGPA()">Calculate GPA</button>
     </div>
 
     <form type=""><label id="coreGPA"></label></form> <!--insert html tag for displaying the calcualted GPA -->
-    </form>
+  </form>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script>
   //This function is called when the user clicks on the calcGPA button
   function calcGPA() {
@@ -128,7 +144,8 @@
     }
 
     //Display the calculated GPA to the HTML label named "coreGPA"
-    document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA +". " + displayMessage;
+    document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA + ". " + displayMessage;
   }
 </script>
+
 </html>
