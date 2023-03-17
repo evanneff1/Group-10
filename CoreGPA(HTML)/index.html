@@ -1,17 +1,15 @@
-<!-- Group 10 Hamburger Project
+<!-- Group 10 GPA project
 Evan Neff, Dawson Newell, Jake Millet, Tanner Child, Cameron Pennock, Paxton Davis
 we used git when completing this assignment -->
 
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Core GPA</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -20,8 +18,7 @@ we used git when completing this assignment -->
   <nav class="navStyle navbar navbar-expand-lg bg-body-tertiary">
     <div style="background-color: rgb(206, 204, 204);" class="container-fluid">
       <a class="navbar-brand" href="#">Group 10: GPA Calculator</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -35,11 +32,11 @@ we used git when completing this assignment -->
   </nav>
 
 <!-- Instructions at top of page -->
-  <h3 class="instructions">Please enter your information to get your IS application GPA:</h1>
+  <h3 class="instructions">Please enter your information to get your IS application GPA:</h3>
 
   <form>    
     <!--insert html tags -->
-    <form method="POST">
+    
       <!-- enter overall GPA here -->
       <label>Overall GPA:</label><input id="overallGPA" type="number" min="0.00" max="4.00" step="0.01">
       <br>
@@ -51,6 +48,7 @@ we used git when completing this assignment -->
       <!-- enter acc200 grade here -->
       <label>Accounting 200 Grade:</label>
       <select id="acc200Grade">
+        <option></option>
         <option value="4">A</option>
         <option value="3.7">A-</option>
         <option value="3.4">B+</option>
@@ -69,6 +67,7 @@ we used git when completing this assignment -->
       <!-- enter IS 201 here -->
       <label>IS 201 Grade:</label>
       <select id="is201Grade">
+        <option></option>
         <option value="4">A</option>
         <option value="3.7">A-</option>
         <option value="3.4">B+</option>
@@ -87,6 +86,7 @@ we used git when completing this assignment -->
       <!-- enter IS 303 grade here -->
       <label>IS 303 Grade:</label>
       <select id="is303Grade">
+        <option></option>
         <option value="4">A</option>
         <option value="3.7">A-</option>
         <option value="3.4">B+</option>
@@ -103,13 +103,14 @@ we used git when completing this assignment -->
       <br>
       <br>
       <!-- enter Essay score here -->
-      <label>Essay score (0-4):</label><input id="essay" list="essayScores">
-      <datalist id="essayScores">
-        <option>4</option>
-        <option>3</option>
-        <option>2</option>
-        <option>1</option>
-      </datalist>
+      <label>Essay score (0-4):</label>
+      <select id="essay">
+        <option></option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+      </select>
     </form>
     <br>
     <!-- Button that wehn pressed will calculate and display application GPA -->
@@ -118,17 +119,16 @@ we used git when completing this assignment -->
     </div>
     <!-- the message will be displayed here: -->
     <form type="text"><label id="coreGPA"></label></form>
-  </form>
+  
   <!-- Image to make less boring -->
   <div class="pic">
     <img src="https://pbs.twimg.com/media/FGmUdnbWQAE_F1l.jpg">
   </div>
   
-</body>
 
-<!-- bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script>
   //This function is called when the user clicks on the calcGPA button
   function calcGPA() {
@@ -158,5 +158,7 @@ we used git when completing this assignment -->
     document.getElementById("coreGPA").innerHTML = "Core GPA is " + fFinalGPA + ". " + displayMessage;
   }
 </script>
+  
 
-</html>
+
+</body><!-- bootstrap JS --></html>
