@@ -4,6 +4,31 @@
     <title>My Title</title>
   </head>
   <body>
-    <p><b>My first python/Django website</b></p>
+    <table>
+      <tr>
+        <th>Date Missing</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Age at Missing</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Gender</th>
+        <th>Race</th>
+      </tr>
+        {% for oStud in data %}
+      </tr>
+
+      <tr>
+        <td>{{oStud.date_missing}}</td>
+        <td>{{oStud.last_name}}</td>
+        <td>{{oStud.first_name}}</td>
+        <td>{{oStud.age_at_missing}}</td>
+        <td>{{oStud.city}}</td>
+        <td>{{oStud.state}}</td>
+        <td>{{oStud.gender}}</td>
+        <td>{{oStud.race}}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>
