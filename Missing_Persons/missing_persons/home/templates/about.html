@@ -9,6 +9,9 @@
     <title>About Us</title>
 </head>
 <style>
+  body {
+    overflow-x: hidden;
+  }
   img {
     height: 50vh;
     width: 100vw;
@@ -31,11 +34,36 @@
   margin-left: 0px;
   margin-right: 0px;
   }
+
+  .abouttext {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+  }
+
+  .float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .float-child {
+      width: 50%;
+      float: left;
+      padding: 20px;
+      margin: 2%;
+  }  
+
+  h2 {
+    text-align: center;
+  }
+
 </style>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">Fight Human Trafficking</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,7 +73,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">How You Can Help</a>
+                <a class="nav-link" href="#">Contributions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
               </li>
             </ul>
           </div>
@@ -55,7 +86,69 @@
         <img src="images/teamPicture.jpg" class="" alt="...">
         <div class="centered"><h1>About Us</h1></div>
       </div>
+    </div>
 
-      
+    <div class="abouttext">
+      Our team is dedicated to fighting human trafficking and other forms of modern slavery around the world. 
+      We believe that every person has the right to live free from exploitation and abuse, and we are committed 
+      to working tirelessly to make that vision a reality. Our work involves a wide range of activities, including 
+      research, advocacy, education, and direct service provision. We partner with local organizations and communities 
+      to identify and address the root causes of trafficking, and we work to raise awareness and build support for 
+      anti-trafficking efforts at the national and international levels. We are a diverse and passionate group of 
+      individuals who share a common goal: to end human trafficking and create a world where all people can live 
+      with dignity and freedom. We welcome anyone who shares our vision to join us in this important work.
+    </div>
+
+    <br>
+    <br>
+
+
+    <h2>Our Team:</h2>
+
+    <div class="float-container">
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-container">
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem;">
+        <img src="images/fakePerson.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
 </body>
 </html>
