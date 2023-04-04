@@ -188,3 +188,7 @@ dictionary = {
 
 def indexPageView(request):
     return render(request, 'homepages/index.html', dictionary)
+
+
+def aboutView(request):
+    return render(request, 'about.html')
