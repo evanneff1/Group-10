@@ -192,3 +192,7 @@ def indexPageView(request):
 
 def aboutView(request):
     return render(request, 'about.html')
+
+
+def contView(request):
+    return render(request, 'contributions_page.html')
