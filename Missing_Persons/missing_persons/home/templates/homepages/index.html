@@ -118,9 +118,9 @@
 
 <body>
   <header>
-    <div class="headeritems"><a href="/">Home</a></div>
-    <div class="headeritems"><a href="about">About</a></div>
-    <div class="headeritems"><a href="contributions">Contributions</a></div>
+    <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
+    <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
+    <div class="headeritems"><a href="{% url 'Contributions' %}">Contributions</a></div>
   </header>
   <div class="heroimage">
     <img
