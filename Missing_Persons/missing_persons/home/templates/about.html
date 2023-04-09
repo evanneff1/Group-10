@@ -75,32 +75,42 @@
     margin-top: 5%;
   }
 
+  header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 15px;
+
+  }
+
+  .headeritems {
+    padding: 10px;
+
+  }
+
+  .headeritems a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
+  }
+
+  .headeritems a:hover {
+    color: rgb(87, 133, 193);
+  }
 
 
 
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fight Human Trafficking</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'Index' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'About' %}">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'Contributions' %}">Contributions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <header>
+    <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
+    <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
+    <div class="headeritems"><a href="{% url 'Contributions' %}">View Data</a></div>
+  </header>
       <div class="containerfortext">
         <img src="{% static 'img/teamPicture.jpg' %}" class="" alt="...">
         <div class="centered"><h1>About Us</h1></div>

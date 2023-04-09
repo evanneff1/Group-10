@@ -187,7 +187,7 @@ dictionary = {
 
 
 def indexPageView(request):
-    return render(request, 'homepages/index.html', dictionary)
+    return render(request, 'homepages/index.html')
 
 
 def aboutView(request):
@@ -195,4 +195,4 @@ def aboutView(request):
 
 
 def contView(request):
-    return render(request, 'contributions_page.html')
+    return render(request, 'missingPersons.html', dictionary)
