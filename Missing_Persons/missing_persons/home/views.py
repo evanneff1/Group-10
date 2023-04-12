@@ -196,3 +196,11 @@ def aboutView(request):
 
 def contView(request):
     return render(request, 'missingPersons.html', dictionary)
+
+
+def personView(request, id):
+    idDict = {
+        'id': id,
+        'data': lst
+    }
+    return render(request, 'person.html', idDict)

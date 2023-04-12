@@ -1,173 +1,170 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Missing Persons Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        background-color: rgb(245, 245, 246);
+        overflow-x: hidden;
+      }
 
-<head>
-  <title>Missing Persons Data</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-  <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin: 0;
-      background-color: rgb(245, 245, 246);
-      overflow-x:hidden;
-    }
+      p,
+      h2,
+      a {
+        font-family: "Oswald", sans-serif;
+      }
 
-    p,
-    h2,
-    a {
-      font-family: 'Oswald', sans-serif;
-    }
+      .welcome p {
+        font-size: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
 
-    .welcome p {
-      font-size: 25px;
-      margin-left: 10%;
-      margin-right: 10%;
-    }
+      main {
+        width: 90vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-    main {
-      width: 90vw;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+      header {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: white;
+        background-color: black;
+        margin: 0;
+        padding: 15px;
+      }
 
-    header {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      color: white;
-      background-color: black;
-      margin: 0;
-      padding: 15px;
+      .headeritems {
+        padding: 10px;
+      }
 
-    }
+      .headeritems a {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+      }
 
-    .headeritems {
-      padding: 10px;
+      .headeritems a:hover {
+        color: rgb(87, 133, 193);
+      }
 
-    }
+      .heroimage {
+        width: 100vw;
+        position: relative;
+      }
 
-    .headeritems a {
-      text-decoration: none;
-      color: white;
-      font-size: 30px;
+      .heroimage img {
+        width: 100vw;
+      }
 
-    }
+      .heroimage h2 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 8vw;
+      }
 
-    .headeritems a:hover {
-      color: rgb(87, 133, 193);
-    }
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
 
-    .heroimage {
-      width: 100vw;
-      position: relative;
-    }
+      td {
+        font-size: 15px;
+        padding: 10px;
+      }
 
-    .heroimage img {
-      width: 100vw;
+      tr {
+        font-size: 15px;
+        padding: 25px;
+      }
 
-    }
+      table {
+        border-collapse: collapse;
+      }
+      .table {
+        padding-bottom: 50px;
+      }
+      .footer {
+        background-color: black;
+        height: 150px;
+        width: 100%;
+      }
+    </style>
+  </head>
 
-    .heroimage h2 {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 8vw;
-    }
+  <body>
+    <header>
+      <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
+      <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
+      <div class="headeritems">
+        <a href="{% url 'Contributions' %}">View Data</a>
+      </div>
+    </header>
+    <main>
+      <div class="welcome">
+        <p>
+          Welcome to our website dedicated to providing information and
+          statistics about missing persons in Utah. The state of Utah has seen a
+          significant increase in the number of missing persons cases in recent
+          years, with hundreds of individuals disappearing without a trace. Our
+          website aims to raise awareness about this issue and provide a
+          comprehensive database of missing persons in the state, as well as
+          resources for those who are seeking information about a missing loved
+          one. We understand the pain and uncertainty that comes with having a
+          missing family member or friend, and our team is committed to
+          providing support and assistance to those who are searching for
+          answers. We hope that our website will be a valuable resource for the
+          Utah community and beyond. Thank you for visiting, and please don't
+          hesitate to reach out to us if you have any questions or need help in
+          your search.
+        </p>
+        <p>
+          We have collected data of various occurences within the past several
+          years of known cases. If you have a case that is not listed below,
+          visit our contact page.
+        </p>
+      </div>
 
-    table,
-    th,
-    td {
-      border: 2px solid black;
-    }
+      <div class="table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>More Info</th>
+          </tr>
+          {% for oStud in data %}
 
-    td{
-      font-size: 15px;
-      padding: 10px;
-    }
-
-    tr { 
-      font-size: 15px;
-      padding: 25px;
-    }
-
-
-    table {
-      border-collapse: collapse;
-    }
-    .table {
-      padding-bottom: 50px;
-    }
-    .footer {
-      background-color: black;
-      height: 150px;
-      width: 100%;
-    }
-
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
-    <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
-    <div class="headeritems"><a href="{% url 'Contributions' %}">View Data</a></div>
-  </header>
-  <main>
-    <div class="welcome">
-      <p>Welcome to our website dedicated to providing information and statistics about missing persons in Utah. The
-        state of Utah has seen a significant increase in the number of missing persons cases in recent years, with
-        hundreds of individuals disappearing without a trace. Our website aims to raise awareness about this issue and
-        provide a comprehensive database of missing persons in the state, as well as resources for those who are seeking
-        information about a missing loved one. We understand the pain and uncertainty that comes with having a missing
-        family member or friend, and our team is committed to providing support and assistance to those who are
-        searching for answers. We hope that our website will be a valuable resource for the Utah community and beyond.
-        Thank you for visiting, and please don't hesitate to reach out to us if you have any questions or need help in
-        your search.</p>
-        <p> We have collected data of various occurences within the past several years of known cases. If you have a case that is not listed below, visit our contact page. </p>
-    </div>
-
-    <div class="table">
-    <table>
-      <tr>
-        <th>Date Missing</th>
-        <th>Last Name</th>
-        <th>First Name</th>
-        <th>Age at Missing</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Gender</th>
-        <th>Race</th>
-      </tr>
-        {% for oStud in data %}
-      </tr>
-
-      <tr>
-        <td>{{oStud.date_missing}}</td>
-        <td>{{oStud.last_name}}</td>
-        <td>{{oStud.first_name}}</td>
-        <td>{{oStud.age_at_missing}}</td>
-        <td>{{oStud.city}}</td>
-        <td>{{oStud.state}}</td>
-        <td>{{oStud.gender}}</td>
-        <td>{{oStud.race}}</td>
-      </tr>
-      {% endfor %}
-    </table>
-  </div>
-  </main>
-  <div class="footer">
-  
-  </div>
-</body>
-
+          <tr>
+            <td>{{oStud.first_name}} {{oStud.last_name}}</td>
+            <td>
+              <a href="{% url 'MissingPerson' id=oStud.first_name %}"
+                >More Info</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </main>
+    <div class="footer"></div>
+  </body>
 </html>

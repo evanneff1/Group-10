@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class MissingPersons(models.Model):
     date_missing = models.DateField()
     last_name = models.CharField(max_length=30)

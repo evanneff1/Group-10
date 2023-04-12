@@ -2,12 +2,27 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Missing Persons Home</title>
 
     <style>
@@ -15,6 +30,13 @@
         margin-left: 15%;
         margin-right: 15%;
         margin-left: 20px;
+      }
+
+      p,
+      div,
+      h2,
+      a {
+        font-family: "Oswald", sans-serif;
       }
 
       .abouttextRight {
@@ -30,31 +52,32 @@
 
       .first {
         width: 300px;
-        float:left; 
+        float: left;
         margin-left: 15%;
         margin-right: 20px;
       }
 
       .second {
         width: 300px;
-        float: right; 
+        float: right;
         margin-right: 15%;
         margin-left: 20px;
       }
 
       .third {
-        float:right;
+        float: right;
         margin-right: 15%;
         width: 300px;
       }
 
       .card {
-        display:inline-block;
+        display: inline-block;
         margin-right: 20px;
         margin-left: 20px;
       }
 
-      h1, h2 {
+      h1,
+      h2 {
         text-align: center;
       }
 
@@ -64,11 +87,11 @@
       }
 
       .donate {
-        width: 70%
+        width: 70%;
       }
 
       .btnd {
-        margin-left:40%
+        margin-left: 40%;
       }
 
       body {
@@ -96,35 +119,31 @@
         background-color: black;
         margin: 0;
         padding: 15px;
-  
       }
-  
+
       .headeritems {
         padding: 10px;
-  
       }
-  
+
       .headeritems a {
         text-decoration: none;
         color: white;
         font-size: 30px;
-  
       }
-  
+
       .headeritems a:hover {
         color: rgb(87, 133, 193);
       }
-  
+
       .heroimage {
         width: 100vw;
         position: relative;
       }
-  
+
       .heroimage img {
         width: 100vw;
-  
       }
-  
+
       .heroimage h2 {
         position: absolute;
         top: 40%;
@@ -134,165 +153,215 @@
         font-size: 8vw;
       }
     </style>
-</head>
+  </head>
 
-<body>
-  <header>
-    <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
-    <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
-    <div class="headeritems"><a href="{% url 'Contributions' %}">View Data</a></div>
-  </header>
-  <div class="heroimage">
-    <img
-      src="https://www.vta.org/sites/default/files/styles/article_banner_image_16_9_1160_x_652_/public/images/2022-01/sex-trafficking-lawyers-c.jpg?h=7320b07b&itok=enT2WJVo">
-    <h2>Missing Persons</h2>
-  </div>
-
-      <br>
-      <br>
-      <h2>Common Myths and Misconceptions:</h2>
-      <br>
-      <div class="wrapper">
-        <div class="first">
-          <div class="card text-bg-dark">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkM5lHA4u6gM1Bbgn1R4An33Yz941qyaQUA&usqp=CAU" class="card-img" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"><small></small></p>
-              </div>
-            </div>
-        </div>
-        <div class="abouttext">
-          <span>Myth #1:</span> Human trafficking does not occur in the United States. It only happens in other countries.
-          <br>
-          <br>
-          <span>Fact:</span> Human trafficking exists in every country, including the United States. It exists nationwide–in cities, suburbs, and rural towns–and probably in your own community.
-        </div>
+  <body>
+    <header>
+      <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
+      <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
+      <div class="headeritems">
+        <a href="{% url 'Contributions' %}">View Data</a>
       </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="second">
-          <div class="card text-bg-dark">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPNOCPNs2zaPsEtHUT0hOIb5pVdeiSKQwtSQ&usqp=CAU" class="card-img" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"><small></small></p>
-              </div>
-            </div>
-        </div>
-        <div class="abouttextRight">
-          <span>Myth #2:</span> Human trafficking victims are only foreign-born individuals and those who are poor.
-          <br>
-          <br>
-          <span>Fact:</span> Human trafficking victims can be any age, race, gender, or nationality: young children, teenagers, women, men, runaways, United States citizens, and foreign-born individuals. 
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="wrapper">
-        <div class="first">
-          <div class="card text-bg-dark">
-              <img src="{% static 'img/hands.jpg' %}" class="card-img" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"><small></small></p>
-              </div>
-            </div>
-        </div>
-        <div class="abouttext">
-          <span>Myth #3:</span> Human trafficking is only sex trafficking.
-          <br>
-          <br>
-          <span>Fact:</span> You may have heard about sex trafficking, but forced labor is also a significant and prevalent type of human trafficking. Victims are found in legitimate and illegitimate labor industries, including sweatshops, massage parlors, agriculture, restaurants, hotels, and domestic service. Note that sex trafficking and forced labor are both forms of human trafficking, involving the exploitation of a person.
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
+    </header>
+    <div class="heroimage">
+      <img
+        src="https://www.vta.org/sites/default/files/styles/article_banner_image_16_9_1160_x_652_/public/images/2022-01/sex-trafficking-lawyers-c.jpg?h=7320b07b&itok=enT2WJVo"
+      />
+      <h2>Missing Persons</h2>
+    </div>
 
-      <br>
-
-      <h1>Learn More:</h1>
-      <br>
-      <br>
-
-      <div class="float-container">
-        <div class="float-child card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Utah Office Of The Attorney General</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-            <br>
-            <p class="card-text">"Attorney General Sean D. Reyes has been a leader and an international voice in the 
-              fight against human trafficking and continues to lead Utah to aggressively fight through education 
-              campaigns, support of anti-human trafficking legislation, victim recovery, and advocacy."</p>
-            <button type="button" class="btn btn-secondary" onClick="toAG()">See Website</button>
-          </div>
-        </div>
-  
-        <div class="float-child card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">BE THE ONE</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-            <br>
-            <p class="card-text">"Human trafficking impacts communities across the U.S., including right here in Utah. 
-              With Utah geographically positioned at the crossroads of the west, thousands of victims are suspected 
-              to be moved through our state, with hundreds victimized within the state."</p>
-              <br>
-            <button type="button" class="btn btn-secondary" onClick="toUTA()">See Website</button>
-          </div>
-        </div>
-  
-        <div class="float-child card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">See Something? Say Something!</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
-            <p class="card-text">"Human trafficking is a form of modern slavery that occurs in every state, including Utah. 
-              The NHTH works closely with service providers, law enforcement, and other professionals in Utah to serve victims 
-              and survivors of trafficking, respond to human trafficking cases, and share information and resources."</p>
-            <button type="button" class="btn btn-secondary" onClick="toTH()">See Website</button>
+    <br />
+    <br />
+    <h2>Common Myths and Misconceptions:</h2>
+    <br />
+    <div class="wrapper">
+      <div class="first">
+        <div class="card text-bg-dark">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEkM5lHA4u6gM1Bbgn1R4An33Yz941qyaQUA&usqp=CAU"
+            class="card-img"
+            alt="..."
+          />
+          <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small></small></p>
           </div>
         </div>
       </div>
-      
-      <br>
-      <br>
-
-      <div class="float-container">
-        <div class="card">
-          <div class="card-header">
-            We Need Your Help!!!
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Please Donate!</h5>
-            <p class="card-text">To help us spread awareness and support victims of human trafficking, please take<br> a moment to donate to our cause. Your donation will impact the lifes of those in need.</p>
-            <a href="#" class="btnd btn btn-primary">DONATE HERE</a>
+      <div class="abouttext">
+        <span>Myth #1:</span> Human trafficking does not occur in the United
+        States. It only happens in other countries.
+        <br />
+        <br />
+        <span>Fact:</span> Human trafficking exists in every country, including
+        the United States. It exists nationwide–in cities, suburbs, and rural
+        towns–and probably in your own community.
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="wrapper">
+      <div class="second">
+        <div class="card text-bg-dark">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPNOCPNs2zaPsEtHUT0hOIb5pVdeiSKQwtSQ&usqp=CAU"
+            class="card-img"
+            alt="..."
+          />
+          <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small></small></p>
           </div>
         </div>
       </div>
-      <br>
-      <br>
-      <br>
+      <div class="abouttextRight">
+        <span>Myth #2:</span> Human trafficking victims are only foreign-born
+        individuals and those who are poor.
+        <br />
+        <br />
+        <span>Fact:</span> Human trafficking victims can be any age, race,
+        gender, or nationality: young children, teenagers, women, men, runaways,
+        United States citizens, and foreign-born individuals.
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="wrapper">
+      <div class="first">
+        <div class="card text-bg-dark">
+          <img src="{% static 'img/hands.jpg' %}" class="card-img" alt="..." />
+          <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small></small></p>
+          </div>
+        </div>
+      </div>
+      <div class="abouttext">
+        <span>Myth #3:</span> Human trafficking is only sex trafficking.
+        <br />
+        <br />
+        <span>Fact:</span> You may have heard about sex trafficking, but forced
+        labor is also a significant and prevalent type of human trafficking.
+        Victims are found in legitimate and illegitimate labor industries,
+        including sweatshops, massage parlors, agriculture, restaurants, hotels,
+        and domestic service. Note that sex trafficking and forced labor are
+        both forms of human trafficking, involving the exploitation of a person.
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <br />
+
+    <h1>Learn More:</h1>
+    <br />
+    <br />
+
+    <div class="float-container">
+      <div class="float-child card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Utah Office Of The Attorney General</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+          <br />
+          <p class="card-text">
+            "Attorney General Sean D. Reyes has been a leader and an
+            international voice in the fight against human trafficking and
+            continues to lead Utah to aggressively fight through education
+            campaigns, support of anti-human trafficking legislation, victim
+            recovery, and advocacy."
+          </p>
+          <button type="button" class="btn btn-secondary" onClick="toAG()">
+            See Website
+          </button>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">BE THE ONE</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+          <br />
+          <p class="card-text">
+            "Human trafficking impacts communities across the U.S., including
+            right here in Utah. With Utah geographically positioned at the
+            crossroads of the west, thousands of victims are suspected to be
+            moved through our state, with hundreds victimized within the state."
+          </p>
+          <br />
+          <button type="button" class="btn btn-secondary" onClick="toUTA()">
+            See Website
+          </button>
+        </div>
+      </div>
+
+      <div class="float-child card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">See Something? Say Something!</h5>
+          <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+          <p class="card-text">
+            "Human trafficking is a form of modern slavery that occurs in every
+            state, including Utah. The NHTH works closely with service
+            providers, law enforcement, and other professionals in Utah to serve
+            victims and survivors of trafficking, respond to human trafficking
+            cases, and share information and resources."
+          </p>
+          <button type="button" class="btn btn-secondary" onClick="toTH()">
+            See Website
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="float-container">
+      <div class="card">
+        <div class="card-header">We Need Your Help!!!</div>
+        <div class="card-body">
+          <h5 class="card-title">Please Donate!</h5>
+          <p class="card-text">
+            To help us spread awareness and support victims of human
+            trafficking, please take<br />
+            a moment to donate to our cause. Your donation will impact the lifes
+            of those in need.
+          </p>
+          <a href="#" class="btnd btn btn-primary">DONATE HERE</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
 
     <script>
       function toUTA() {
-        window.open("https://www.rideuta.com/news/2021/01/Human-Trafficking#:~:text=BE%20THE%20ONE%20to%20SUPPORT%20victims%20of%20human%20trafficking.&text=victims%20to%20services%3A-,Contact%20the%20National%20Human%20Trafficking%20Hotline%20at%20888%2D373%2D7888,%40aau%2Dslc.org%20.", "_self")
+        window.open(
+          "https://www.rideuta.com/news/2021/01/Human-Trafficking#:~:text=BE%20THE%20ONE%20to%20SUPPORT%20victims%20of%20human%20trafficking.&text=victims%20to%20services%3A-,Contact%20the%20National%20Human%20Trafficking%20Hotline%20at%20888%2D373%2D7888,%40aau%2Dslc.org%20.",
+          "_self"
+        );
       }
 
       function toAG() {
-        window.open("https://attorneygeneral.utah.gov/initiatives/human-trafficking/", "_self")
+        window.open(
+          "https://attorneygeneral.utah.gov/initiatives/human-trafficking/",
+          "_self"
+        );
       }
 
       function toTH() {
-        window.open("https://humantraffickinghotline.org/en/statistics/utah", "_self")
+        window.open(
+          "https://humantraffickinghotline.org/en/statistics/utah",
+          "_self"
+        );
       }
     </script>
-</body>
-
-</html> 
+  </body>
+</html>

@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Missing Persons Home</title>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        background-color: rgb(245, 245, 246);
+        overflow-x: hidden;
+      }
+  
+      p,
+      h2,
+      a {
+        font-family: "Oswald", sans-serif;
+      }
+  
+      .welcome p {
+        font-size: 25px;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+  
+      main {
+        width: 90vw;
+        height: auto;
+        display: grid;
+        grid-template-areas:
+          "A A B B"
+          "A A B B";
+        justify-items: stretch;
+        margin-top: 7vh;
+      }
+  
+      header {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        color: white;
+        background-color: black;
+        margin: 0;
+        padding: 15px;
+      }
+  
+      .headeritems {
+        padding: 10px;
+      }
+  
+      .headeritems a {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+      }
+  
+      .headeritems a:hover {
+        color: rgb(87, 133, 193);
+      }
+  
+      .firstrow {
+        grid-area: A;
+        align-self: center;
+        justify-self: end;
+        display: flex;
+        flex-direction: column;
+        margin-right: 2vw;
+  
+      }
+  
+      .firstrow img {
+        width: 20vw;
+        height: auto;
+      }
+  
+      .moredata .name {
+        font-size: 5vw;
+      }
+  
+      .bold {
+        font-weight: bold;
+        font-size: 1vw;
+      }
+  
+      .moredata {
+        grid-area: B;
+        align-self: center;
+        justify-self: start;
+      }
+  
+      .moredata div {
+        font-size: 20px;
+      }
+  
+      .footer {
+        background-color: black;
+        height: 150px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="headeritems"><a href="{% url 'Index' %}">Home</a></div>
+      <div class="headeritems"><a href="{% url 'About' %}">About</a></div>
+      <div class="headeritems">
+        <a href="{% url 'Contributions' %}">View Data</a>
+      </div>
+    </header>
+   <main>
+    <div class="firstrow">
+     <img src="{% static 'img/fakePerson.png' %}" alt="Fake Person">
+    </div>
+        {% for oStud in data %}{% if oStud.first_name == id%}
+        <div class="moredata">
+          <div class="name">{{oStud.first_name}} {{oStud.last_name}}</div>
+          <div><span class="bold">Date Missing: </span><br>{{oStud.date_missing}}</div>
+    
+    
+          <div><span class="bold">Age at missing: </span><br>{{oStud.age_at_missing}}</div>
+          <div class="location"><span class="bold">Location: </span><br>{{oStud.city}}, {{oStud.state}}</div>
+    
+          <div><span class="bold">Gender: </span><br>{{oStud.gender}}</div>
+          <div><span class="bold">Race: </span><br>{{oStud.race}}</div>
+        </div>
+        {% endif %} {% endfor %}
+    
+    </div>
+  </body>
+</html>
