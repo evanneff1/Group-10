@@ -138,26 +138,24 @@
       <div class="firstrow">
         <img src="{% static 'img/fakePerson.png' %}" alt="Fake Person" />
       </div>
-      {% for oStud in data %}{% if oStud.first_name == id%}
       <div class="moredata">
-        <div class="name">{{oStud.first_name}} {{oStud.last_name}}</div>
+        <div class="name">{{data.first_name}} {{data.last_name}}</div>
         <div>
-          <span class="bold">Date Missing: </span><br />{{oStud.date_missing}}
+          <span class="bold">Date Missing: </span><br />{{data.date_missing}}
         </div>
 
         <div>
           <span class="bold">Age at missing: </span
-          ><br />{{oStud.age_at_missing}}
+          ><br />{{data.age_at_missing}}
         </div>
         <div class="location">
-          <span class="bold">Location: </span><br />{{oStud.city}},
-          {{oStud.state}}
+          <span class="bold">Location: </span><br />{{data.city}},
+          {{data.state}}
         </div>
 
-        <div><span class="bold">Gender: </span><br />{{oStud.gender}}</div>
-        <div><span class="bold">Race: </span><br />{{oStud.race}}</div>
+        <div><span class="bold">Gender: </span><br />{{data.gender}}</div>
+        <div><span class="bold">Race: </span><br />{{data.race}}</div>
       </div>
-      {% endif %} {% endfor %}
     </main>
     <div class="footer"></div>
   </body>

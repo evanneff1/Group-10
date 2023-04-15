@@ -5,5 +5,5 @@ urlpatterns = [
     path("", indexPageView, name="Index"),
     path("about/", aboutView, name="About"),
     path("contributions/", contView, name="Contributions"),
-    path("<str:id>", personView, name="MissingPerson")
+    path("<int:id>", personView, name="MissingPerson")
 ]
