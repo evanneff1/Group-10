@@ -1,6 +1,7 @@
-{% comment %} Authors: Tanner Child, Cameron Pennock, Dawson Newell, Evan Neff, Jake Millett, Paxton Davis
-The purpose of this application is to raise awareness of Human traffiking and to create a website displaying 
-the data of missing persons. {% endcomment %}
+{% comment %} Authors: Tanner Child, Cameron Pennock, Dawson Newell, Evan Neff,
+Jake Millett, Paxton Davis The purpose of this application is to raise awareness
+of Human traffiking and to create a website displaying the data of missing
+persons. {% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -145,7 +146,7 @@ the data of missing persons. {% endcomment %}
         <p>
           We have collected data of various occurences within the past several
           years of known cases. If you have a case that is not listed below,
-          visit our contact page.
+          visit our home page and find the form at the bottom of the page.
         </p>
       </div>
 
@@ -160,9 +161,7 @@ the data of missing persons. {% endcomment %}
           <tr>
             <td>{{oStud.first_name}} {{oStud.last_name}}</td>
             <td>
-              <a href="{% url 'MissingPerson' id=oStud.id %}"
-                >More Info</a
-              >
+              <a href="{% url 'MissingPerson' id=oStud.id %}">More Info</a>
             </td>
           </tr>
           {% endfor %}

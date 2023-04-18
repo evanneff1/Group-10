@@ -1,8 +1,7 @@
-{% comment %} Authors: Tanner Child, Cameron Pennock, Dawson Newell, Evan Neff, Jake Millett, Paxton Davis
-The purpose of this application is to raise awareness of Human traffiking and to create a website displaying 
-the data of missing persons. {% endcomment %}
-
-{% load static %}
+{% comment %} Authors: Tanner Child, Cameron Pennock, Dawson Newell, Evan Neff,
+Jake Millett, Paxton Davis The purpose of this application is to raise awareness
+of Human traffiking and to create a website displaying the data of missing
+persons. {% endcomment %} {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -155,6 +154,16 @@ the data of missing persons. {% endcomment %}
         transform: translate(-50%, -50%);
         color: white;
         font-size: 8vw;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        {% comment %} justify-content: center; {% endcomment %}
+        align-items: center;
+      }
+      form p {
+        font-size:25px;
+        text-align:center;
       }
     </style>
   </head>
@@ -344,6 +353,30 @@ the data of missing persons. {% endcomment %}
     <br />
     <br />
     <br />
+    <form>
+      <p>
+        If you have information concerning a missing person, please report it
+        here:
+      </p>
+      <br />
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="city">Age:</label>
+      <input type="integer" id="Age" name="Age" /><br />
+      <label for="datemissing">Date Missing:</label>
+      <input type="date" id="datemissing" name="datemissing" /><br />
+      <label for="Location">Location:</label>
+      <input type="text" id="location" name="location" /><br />
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" name="gender" /><br />
+      <label for="race">Race:</label>
+      <input type="text" id="race" name="race" /><br />
+      <input type="submit" value="Submit" />
+      <br />
+      <br />
+    </form>
 
     <script>
       function toUTA() {
