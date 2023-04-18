@@ -139,27 +139,29 @@ the data of missing persons. {% endcomment %}
       </div>
     </header>
     <main>
-      <div class="firstrow">
-        <img src="{% static 'img/fakePerson.png' %}" alt="Fake Person" />
-      </div>
-      <div class="moredata">
-        <div class="name">{{data.first_name}} {{data.last_name}}</div>
-        <div>
-          <span class="bold">Date Missing: </span><br />{{data.date_missing}}
+        <div class="firstrow">
+          <img src="{% static 'img/fakePerson.png' %}" alt="Fake Person" />
         </div>
+      <form>
+        <div class="moredata">
+          <div class="name">{{data.first_name}} {{data.last_name}}</div>
+          <div>
+            <span class="bold">Date Missing: </span><br />{{data.date_missing}}
+          </div>
 
-        <div>
-          <span class="bold">Age at missing: </span
-          ><br />{{data.age_at_missing}}
-        </div>
-        <div class="location">
-          <span class="bold">Location: </span><br />{{data.city}},
-          {{data.state}}
-        </div>
+          <div>
+            <span class="bold">Age at missing: </span
+            ><br />{{data.age_at_missing}}
+          </div>
+          <div class="location">
+            <span class="bold">Location: </span><br />{{data.city}},
+            {{data.state}}
+          </div>
 
-        <div><span class="bold">Gender: </span><br />{{data.gender}}</div>
-        <div><span class="bold">Race: </span><br />{{data.race}}</div>
-      </div>
+          <div><span class="bold">Gender: </span><br />{{data.gender}}</div>
+          <div><span class="bold">Race: </span><br />{{data.race}}</div>
+        </div>
+      </form>
     </main>
     <div class="footer"></div>
   </body>

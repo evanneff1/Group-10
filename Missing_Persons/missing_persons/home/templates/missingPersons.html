@@ -151,21 +151,23 @@ persons. {% endcomment %}
       </div>
 
       <div class="table">
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>More Info</th>
-          </tr>
-          {% for oStud in data %}
+        <form>        
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>More Info</th>
+            </tr>
+            {% for oStud in data %}
 
-          <tr>
-            <td>{{oStud.first_name}} {{oStud.last_name}}</td>
-            <td>
-              <a href="{% url 'MissingPerson' id=oStud.id %}">More Info</a>
-            </td>
-          </tr>
-          {% endfor %}
-        </table>
+            <tr>
+              <td>{{oStud.first_name}} {{oStud.last_name}}</td>
+              <td>
+                <a href="{% url 'MissingPerson' id=oStud.id %}">More Info</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>
+        </form>
       </div>
     </main>
     <div class="footer"></div>
